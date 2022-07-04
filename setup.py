@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-GFICLEE_VERSION = '1.0'
+GFICLEE_VERSION = '1.2'
 
 setup(
     name='srkSUB',
@@ -8,12 +8,11 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     entry_points={
-        "console_scripts": ['cfastproject = fastproject.main:main']
     },
     install_requires=[
         "substrate-interface", "scalecodec"
     ],
-    url='https://github.com/Yxiaoyang/',
+    url='https://github.com/Yxiaoyang/srkSUB',
     license='GNU General Public License v3.0',
     author='srank',
     author_email='625593240@qq.com',
