@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 # https://github.com/polkascan/py-substrate-interface
-from substrateinterface import *
+import substrateinterface as sub
 from scalecodec.type_registry import load_type_registry_file, SUPPORTED_TYPE_REGISTRY_PRESETS
+
+baseDir = sub.__file__.split("substrateinterface")[0]
 
 
 class SUB(object):
@@ -43,10 +45,10 @@ class SUB(object):
 
     def __init__(self):
         self.crust = {
-            # https: // github.com / crustio / crust.js / blob / mainnet / packages / type - definitions / src / json / types.json
+            # https: // github.com/crustio/crust.js/blob/mainnet/packages/type - definitions/src/json /types.json
             'url': "wss://rpc-crust-mainnet.decoo.io/",
             'ss58_format': 66,
-            'type_registry_file': 'cru.json',
+            'type_registry_file': baseDir+'cru.json',
             'type_registry_preset': 'substrate-node-template',
             'type_registry': None
         }
@@ -67,10 +69,10 @@ class SUB(object):
         }
 
         self.khala = {
-            # https: // github.com / Phala - Network / typedefs / blob / main / src / khala.ts
+            # https: // github.com/Phala - Network/typedefs/blob/main/src/khala.ts
             'url': "wss://khala-api.phala.network/ws",
             'ss58_format': 30,
-            'type_registry_file': 'khala.json',
+            'type_registry_file': baseDir+'khala.json',
             'type_registry_preset': 'substrate-node-template',
             'type_registry': None
         }
@@ -87,7 +89,7 @@ class SUB(object):
             custom_type_registry = load_type_registry_file(self.chainConf[chain_name]['type_registry_file'])
             self.chainConf[chain_name]['type_registry'] = custom_type_registry
 
-        substrate = SubstrateInterface(
+        substrate = sub.SubstrateInterface(
             url=self.chainConf[chain_name]['url'],
             ss58_format=self.chainConf[chain_name]['ss58_format'],
             type_registry_preset=self.chainConf[chain_name]['type_registry_preset'],
