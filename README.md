@@ -21,18 +21,18 @@ pip install srkSUB
 
 
 
-### 连接**`crust`**
+### 连接`crust`
 
 ```python
 from srkSUB.base import SUB
 s = SUB()
-kha = s.connect("crust")
-print(kha.token_decimals)
+cru = s.connect("crust")
+print(cru.token_decimals)
 ```
 
 
 
-### 连接**`khala`**
+### 连接`khala`
 
 ```python
 from srkSUB.base import SUB
