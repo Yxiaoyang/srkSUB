@@ -3,7 +3,7 @@
 import substrateinterface as sub
 from scalecodec.type_registry import load_type_registry_file, SUPPORTED_TYPE_REGISTRY_PRESETS
 
-baseDir = sub.__file__.split("substrateinterface")[0] + "srkSUB\\"
+baseDir = sub.__file__.split("substrateinterface")[0] + "srkSUB/"
 
 
 class SUB(object):

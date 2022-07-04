@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-GFICLEE_VERSION = '1.3'
+GFICLEE_VERSION = '1.5'
 
 setup(
     name='srkSUB',
