@@ -26,7 +26,7 @@ pip install srkSUB
 ```python
 from srkSUB.base import SUB
 s = SUB()
-cru = s.connect("crust")
+cru = s.connect(chain_name="crust", rpc="")
 print(cru.token_decimals)
 ```
 
@@ -37,7 +37,7 @@ print(cru.token_decimals)
 ```python
 from srkSUB.base import SUB
 s = SUB()
-kha = s.connect("khala")
+kha = s.connect(chain_name="khala", rpc="")
 print(kha.token_decimals)
 ```
 
@@ -47,4 +47,4 @@ print(kha.token_decimals)
 
 
 
-❗️ 其他链支持，提交 **ISSUES** 即可 ❗️
+❗️ 需要其他链支持，请提交 **ISSUES** 即可 ❗️
