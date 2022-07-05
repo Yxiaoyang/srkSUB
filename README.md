@@ -44,3 +44,7 @@ print(kha.token_decimals)
 
 
 > 实例之后的详细使用方法请查看`substrate-interface`文档
+
+
+
+❗️ 其他链支持，提交 **ISSUES** 即可 ❗️
