@@ -3,7 +3,7 @@
 import substrateinterface as sub
 from scalecodec.type_registry import load_type_registry_file, SUPPORTED_TYPE_REGISTRY_PRESETS
 
-baseDir = sub.__file__.split("substrateinterface")[0] + "srkSUB/"
+baseDir = sub.__file__.split("substrateinterface")[0] + "srkSUB/types/"
 
 
 class SUB(object):
@@ -84,7 +84,10 @@ class SUB(object):
             'khala': self.khala,
         }
 
-    def connect(self, chain_name):
+    def connect(self, chain_name, rpc):
+        if rpc != "":
+            self.chainConf[chain_name]['url'] = rpc
+
         if chain_name not in SUPPORTED_TYPE_REGISTRY_PRESETS:
             custom_type_registry = load_type_registry_file(self.chainConf[chain_name]['type_registry_file'])
             self.chainConf[chain_name]['type_registry'] = custom_type_registry
