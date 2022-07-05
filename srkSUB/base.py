@@ -45,7 +45,6 @@ class SUB(object):
 
     def __init__(self):
         self.crust = {
-            # https: // github.com/crustio/crust.js/blob/mainnet/packages/type - definitions/src/json /types.json
             'url': "wss://rpc-crust-mainnet.decoo.io/",
             'ss58_format': 66,
             'type_registry_file': baseDir+'cru.json',
@@ -69,7 +68,6 @@ class SUB(object):
         }
 
         self.khala = {
-            # https: // github.com/Phala - Network/typedefs/blob/main/src/khala.ts
             'url': "wss://khala-api.phala.network/ws",
             'ss58_format': 30,
             'type_registry_file': baseDir+'khala.json',
